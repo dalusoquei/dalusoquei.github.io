@@ -1,0 +1,1256 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>五月天五月湖_在线MV专区|官方影像与社区</title>
+<meta name="description" content="五月天五月湖官方MV在线观看专区，收录五月天经典影像、五月湖现场纪实与乐迷社区内容，随时点开即看。">
+<style>
+:root{
+  --ink:#0e1120;
+  --ink-soft:#1a1f36;
+  --paper:#f4f2ec;
+  --paper-2:#eceae2;
+  --line:#d8d4c8;
+  --accent:#e8503a;
+  --accent-2:#f0a93b;
+  --sky:#2f5fb3;
+  --sky-deep:#173a78;
+  --lake:#1d6f7a;
+  --lake-light:#4fa8ad;
+  --white:#ffffff;
+  --shadow:0 18px 46px -22px rgba(14,17,32,.45);
+  --radius:18px;
+  --serif:"Songti SC","STSong","Noto Serif SC",Georgia,serif;
+  --sans:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans);
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.75;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ============ 顶部导航 ============ */
+.site-header{
+  position:fixed;top:0;left:0;width:100%;z-index:100;
+  background:rgba(14,17,32,.72);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(255,255,255,.08);
+  transition:background .4s ease,padding .4s ease;
+}
+.site-header.solid{background:rgba(14,17,32,.95)}
+.nav-inner{
+  max-width:1240px;margin:0 auto;padding:0 28px;
+  height:70px;display:flex;align-items:center;justify-content:space-between;
+}
+.brand{
+  display:flex;align-items:center;gap:12px;
+  color:var(--white);text-decoration:none;font-weight:700;letter-spacing:2px;
+}
+.brand-mark{
+  width:38px;height:38px;border-radius:11px;
+  background:linear-gradient(140deg,var(--accent),var(--accent-2));
+  display:grid;place-items:center;position:relative;overflow:hidden;
+  box-shadow:0 6px 18px -6px rgba(232,80,58,.7);
+}
+.brand-mark svg{width:22px;height:22px}
+.brand-text{font-size:15px;font-family:var(--serif)}
+.brand-text small{display:block;font-size:9px;letter-spacing:4px;opacity:.6;font-weight:400;font-family:var(--sans)}
+.nav-links{display:flex;gap:6px;align-items:center}
+.nav-links a{
+  color:rgba(255,255,255,.78);text-decoration:none;font-size:14px;
+  padding:9px 15px;border-radius:9px;transition:.25s;letter-spacing:.5px;
+}
+.nav-links a:hover{color:#fff;background:rgba(255,255,255,.1)}
+.nav-cta{
+  background:var(--accent)!important;color:#fff!important;font-weight:600;
+  padding:10px 20px!important;box-shadow:0 8px 20px -8px rgba(232,80,58,.8);
+}
+.nav-cta:hover{background:#ff664e!important;transform:translateY(-1px)}
+.nav-toggle{display:none;background:none;border:0;cursor:pointer;padding:8px}
+.nav-toggle span{display:block;width:24px;height:2px;background:#fff;margin:5px 0;transition:.3s;border-radius:2px}
+
+/* ============ 首屏 ============ */
+.hero{
+  position:relative;min-height:100vh;display:flex;align-items:center;
+  background:radial-gradient(120% 100% at 50% 0%,#1d2a52 0%,#0e1120 55%,#080a14 100%);
+  overflow:hidden;padding:130px 0 90px;
+}
+.hero-canvas{position:absolute;inset:0;width:100%;height:100%;opacity:.9}
+.hero-grain{
+  position:absolute;inset:0;opacity:.35;pointer-events:none;
+  background-image:radial-gradient(rgba(255,255,255,.12) 1px,transparent 1px);
+  background-size:4px 4px;mix-blend-mode:overlay;
+}
+.hero-inner{
+  position:relative;z-index:3;max-width:1240px;margin:0 auto;padding:0 28px;
+  display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center;
+}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:10px;color:var(--accent-2);
+  font-size:12px;letter-spacing:4px;text-transform:uppercase;margin-bottom:24px;
+  font-weight:600;
+}
+.hero-eyebrow::before{content:"";width:36px;height:1px;background:var(--accent-2)}
+.hero h1{
+  font-family:var(--serif);color:#fff;font-size:clamp(46px,7vw,92px);
+  line-height:1.06;letter-spacing:2px;font-weight:800;margin-bottom:26px;
+  text-shadow:0 8px 40px rgba(0,0,0,.55);
+}
+.hero h1 em{
+  font-style:normal;display:inline-block;
+  background:linear-gradient(100deg,var(--accent-2),var(--accent) 60%,#ff8a5c);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero-sub{
+  color:rgba(255,255,255,.72);font-size:17px;max-width:520px;margin-bottom:38px;
+  line-height:1.95;
+}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;text-decoration:none;
+  padding:15px 30px;border-radius:50px;font-size:15px;font-weight:600;
+  transition:.3s;border:1px solid transparent;cursor:pointer;
+}
+.btn-primary{background:var(--accent);color:#fff;box-shadow:0 16px 34px -14px rgba(232,80,58,.9)}
+.btn-primary:hover{background:#ff664e;transform:translateY(-3px);box-shadow:0 22px 44px -16px rgba(232,80,58,.95)}
+.btn-ghost{color:#fff;border-color:rgba(255,255,255,.28);background:rgba(255,255,255,.04)}
+.btn-ghost:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.5);transform:translateY(-3px)}
+.btn svg{width:18px;height:18px}
+
+/* 首屏播放卡 */
+.hero-player{
+  position:relative;border-radius:22px;overflow:hidden;
+  background:linear-gradient(155deg,rgba(255,255,255,.1),rgba(255,255,255,.02));
+  border:1px solid rgba(255,255,255,.16);
+  box-shadow:0 40px 80px -30px rgba(0,0,0,.9);
+  padding:16px;
+}
+.player-screen{
+  position:relative;border-radius:14px;overflow:hidden;
+  aspect-ratio:16/10;
+  background:
+    radial-gradient(90% 70% at 30% 10%,rgba(79,168,173,.55),transparent 60%),
+    radial-gradient(80% 70% at 80% 90%,rgba(232,80,58,.5),transparent 62%),
+    linear-gradient(160deg,#183150,#0d1526 70%);
+  display:grid;place-items:center;
+}
+.player-screen::after{
+  content:"";position:absolute;inset:0;
+  background:repeating-linear-gradient(0deg,rgba(255,255,255,.03) 0 1px,transparent 1px 3px);
+  pointer-events:none;
+}
+.play-ring{
+  width:82px;height:82px;border-radius:50%;
+  background:rgba(255,255,255,.16);backdrop-filter:blur(6px);
+  display:grid;place-items:center;cursor:pointer;
+  border:1px solid rgba(255,255,255,.45);
+  transition:.35s;position:relative;z-index:2;
+  animation:pulseRing 3s infinite;
+}
+@keyframes pulseRing{
+  0%,100%{box-shadow:0 0 0 0 rgba(255,255,255,.35)}
+  50%{box-shadow:0 0 0 22px rgba(255,255,255,0)}
+}
+.play-ring:hover{background:var(--accent);transform:scale(1.08);border-color:var(--accent)}
+.play-ring svg{width:30px;height:30px;fill:#fff;margin-left:4px}
+.player-hud{
+  position:absolute;left:16px;right:16px;bottom:14px;z-index:3;
+  display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.85);
+  font-size:12px;letter-spacing:1px;
+}
+.hud-bar{flex:1;height:3px;border-radius:3px;background:rgba(255,255,255,.25);overflow:hidden}
+.hud-bar i{display:block;height:100%;width:32%;background:var(--accent-2);border-radius:3px;animation:barMove 9s linear infinite}
+@keyframes barMove{0%{width:8%}100%{width:96%}}
+.player-meta{padding:18px 8px 6px;display:flex;justify-content:space-between;align-items:flex-start;gap:14px}
+.player-meta h3{color:#fff;font-size:17px;font-weight:600;letter-spacing:.5px}
+.player-meta p{color:rgba(255,255,255,.5);font-size:12px;letter-spacing:1.5px;margin-top:4px}
+.live-tag{
+  display:inline-flex;align-items:center;gap:6px;font-size:11px;color:var(--accent-2);
+  border:1px solid rgba(240,169,59,.45);padding:4px 10px;border-radius:20px;white-space:nowrap;
+}
+.live-tag b{width:6px;height:6px;border-radius:50%;background:var(--accent);animation:blink 1.4s infinite}
+@keyframes blink{50%{opacity:.25}}
+
+/* 首屏统计 */
+.hero-stats{
+  position:relative;z-index:3;max-width:1240px;margin:70px auto 0;padding:0 28px;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:22px;
+}
+.stat{
+  border-top:1px solid rgba(255,255,255,.16);padding-top:18px;
+}
+.stat b{display:block;color:#fff;font-size:clamp(24px,3vw,36px);font-family:var(--serif);letter-spacing:1px}
+.stat span{color:rgba(255,255,255,.5);font-size:12.5px;letter-spacing:2px}
+
+/* ============ 通用区块 ============ */
+.section{max-width:1240px;margin:0 auto;padding:110px 28px}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:54px;flex-wrap:wrap}
+.sec-kicker{color:var(--accent);font-size:12px;letter-spacing:5px;font-weight:700;margin-bottom:14px;display:block}
+.sec-head h2{
+  font-family:var(--serif);font-size:clamp(30px,4vw,46px);line-height:1.2;
+  letter-spacing:1px;font-weight:800;color:var(--ink);
+}
+.sec-head p{max-width:440px;color:#5d6072;font-size:15px}
+
+/* ============ MV 在线看 ============ */
+.mv-section{background:linear-gradient(180deg,var(--paper) 0%,#eeebe2 100%)}
+.mv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.mv-card{
+  background:var(--white);border-radius:var(--radius);overflow:hidden;
+  border:1px solid var(--line);transition:.4s cubic-bezier(.2,.7,.3,1);
+  display:flex;flex-direction:column;position:relative;
+}
+.mv-card:hover{transform:translateY(-8px);box-shadow:var(--shadow);border-color:#c4bfae}
+.mv-thumb{
+  position:relative;aspect-ratio:16/9;overflow:hidden;cursor:pointer;
+  display:grid;place-items:center;
+}
+.mv-thumb .cover{position:absolute;inset:0;transition:transform .8s cubic-bezier(.2,.7,.3,1)}
+.mv-card:hover .cover{transform:scale(1.07)}
+.mv-thumb .play-mini{
+  position:relative;z-index:2;width:54px;height:54px;border-radius:50%;
+  background:rgba(255,255,255,.22);backdrop-filter:blur(4px);
+  border:1px solid rgba(255,255,255,.6);
+  display:grid;place-items:center;transition:.3s;
+}
+.mv-thumb .play-mini svg{width:18px;height:18px;fill:#fff;margin-left:3px}
+.mv-card:hover .play-mini{background:var(--accent);border-color:var(--accent)}
+.mv-dur{
+  position:absolute;right:12px;bottom:12px;z-index:3;
+  background:rgba(8,10,20,.8);color:#fff;font-size:11px;
+  padding:3px 9px;border-radius:6px;letter-spacing:1px;
+}
+.mv-body{padding:22px 22px 24px;display:flex;flex-direction:column;gap:10px;flex:1}
+.mv-tag{font-size:11px;color:var(--sky);letter-spacing:2.5px;font-weight:700}
+.mv-body h3{font-size:19px;font-family:var(--serif);letter-spacing:.5px;line-height:1.4}
+.mv-body p{font-size:13.5px;color:#656878;line-height:1.8;flex:1}
+.mv-foot{
+  display:flex;justify-content:space-between;align-items:center;
+  border-top:1px dashed var(--line);padding-top:14px;margin-top:4px;
+  font-size:12px;color:#8a8c99;
+}
+.mv-foot .watch{color:var(--accent);font-weight:700;letter-spacing:1px;display:inline-flex;gap:6px;align-items:center;text-decoration:none}
+.mv-foot .watch svg{width:13px;height:13px;fill:var(--accent);transition:.3s}
+.mv-card:hover .mv-foot .watch svg{transform:translateX(4px)}
+
+/* 封面配色（纯CSS氛围图） */
+.cover.c1{background:radial-gradient(70% 90% at 20% 20%,#f0a93b,transparent 60%),radial-gradient(80% 80% at 90% 90%,#e8503a,transparent 62%),linear-gradient(150deg,#2c1c3d,#10121f)}
+.cover.c2{background:radial-gradient(70% 90% at 80% 15%,#4fa8ad,transparent 60%),radial-gradient(90% 80% at 10% 95%,#2f5fb3,transparent 65%),linear-gradient(160deg,#0d2a3c,#0a1120)}
+.cover.c3{background:radial-gradient(60% 80% at 30% 85%,#e8503a,transparent 62%),radial-gradient(80% 70% at 85% 15%,#f0a93b,transparent 58%),linear-gradient(140deg,#241228,#0e1018)}
+.cover.c4{background:radial-gradient(70% 80% at 15% 20%,#4fa8ad,transparent 58%),radial-gradient(80% 90% at 90% 80%,#1d6f7a,transparent 62%),linear-gradient(160deg,#12263a,#0a1018)}
+.cover.c5{background:radial-gradient(70% 80% at 70% 20%,#ff8a5c,transparent 58%),radial-gradient(90% 80% at 20% 90%,#b23a52,transparent 62%),linear-gradient(150deg,#2a1420,#0c0e18)}
+.cover.c6{background:radial-gradient(70% 90% at 50% 10%,#8fa8e8,transparent 60%),radial-gradient(80% 80% at 80% 95%,#2f5fb3,transparent 62%),linear-gradient(160deg,#141a36,#090b14)}
+.cover::after{
+  content:"";position:absolute;inset:0;
+  background:repeating-linear-gradient(115deg,rgba(255,255,255,.05) 0 2px,transparent 2px 9px);
+  mix-blend-mode:overlay;
+}
+
+/* 更多按钮行 */
+.mv-more{display:flex;justify-content:center;margin-top:52px}
+.mv-more .btn-ghost{color:var(--ink);border-color:#c6c1b0;background:transparent}
+.mv-more .btn-ghost:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+
+/* ============ 五月湖现场 ============ */
+.lake-section{
+  position:relative;background:linear-gradient(160deg,#0f2430 0%,#0a1622 55%,#081019 100%);
+  color:#fff;overflow:hidden;
+}
+.lake-section::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(60% 50% at 15% 10%,rgba(79,168,173,.3),transparent 65%),
+    radial-gradient(50% 50% at 90% 85%,rgba(232,80,58,.22),transparent 65%);
+  pointer-events:none;
+}
+.lake-inner{
+  position:relative;z-index:2;max-width:1240px;margin:0 auto;padding:110px 28px;
+  display:grid;grid-template-columns:.95fr 1.05fr;gap:64px;align-items:center;
+}
+.lake-visual{position:relative}
+.lake-stage{
+  position:relative;aspect-ratio:4/3;border-radius:22px;overflow:hidden;
+  border:1px solid rgba(255,255,255,.14);
+  background:linear-gradient(180deg,#14384a 0%,#0c2434 45%,#071018 100%);
+  box-shadow:0 40px 90px -30px rgba(0,0,0,.9);
+}
+.moon{
+  position:absolute;top:9%;left:50%;transform:translateX(-50%);
+  width:74px;height:74px;border-radius:50%;
+  background:radial-gradient(circle at 35% 35%,#fff6e0,#f0d79a 55%,#d8b26a);
+  box-shadow:0 0 60px 18px rgba(240,215,154,.35),0 0 120px 40px rgba(240,215,154,.12);
+}
+.lake-svg{position:absolute;left:0;right:0;bottom:0;width:100%;height:60%}
+.crowd{
+  position:absolute;left:0;right:0;bottom:0;height:26%;
+  display:flex;align-items:flex-end;justify-content:center;gap:2px;padding:0 6px;
+  opacity:.92;
+}
+.crowd i{
+  display:block;width:6px;border-radius:4px 4px 0 0;
+  background:linear-gradient(180deg,#1a2b3a,#0a141c);
+  animation:sway 2.6s ease-in-out infinite alternate;
+}
+@keyframes sway{from{transform:translateY(0)}to{transform:translateY(-3px)}}
+.lake-caption{
+  margin-top:22px;display:flex;justify-content:space-between;align-items:center;
+  color:rgba(255,255,255,.6);font-size:12.5px;letter-spacing:2px;
+}
+.lake-caption strong{color:var(--accent-2);font-weight:700}
+
+.lake-section .sec-kicker{color:var(--accent-2)}
+.lake-section h2{color:#fff}
+.lake-section .sec-head p{color:rgba(255,255,255,.62)}
+.lake-list{display:flex;flex-direction:column;gap:0;margin-top:38px}
+.lake-item{
+  display:grid;grid-template-columns:60px 1fr auto;gap:20px;align-items:center;
+  padding:22px 0;border-bottom:1px solid rgba(255,255,255,.1);
+  transition:.3s;cursor:default;
+}
+.lake-item:hover{padding-left:8px;background:rgba(255,255,255,.03)}
+.lake-item .no{font-family:var(--serif);font-size:22px;color:rgba(255,255,255,.3);letter-spacing:1px}
+.lake-item h4{font-size:16.5px;letter-spacing:.5px;margin-bottom:4px;font-weight:600}
+.lake-item p{font-size:13px;color:rgba(255,255,255,.5)}
+.lake-item .date{font-size:12px;color:var(--accent-2);letter-spacing:1.5px;white-space:nowrap}
+.lake-item:hover .no{color:var(--accent)}
+
+/* ============ 品牌故事 ============ */
+.story-section{background:var(--paper)}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.story-text h2{font-family:var(--serif);font-size:clamp(30px,3.6vw,44px);line-height:1.25;margin-bottom:26px;letter-spacing:1px}
+.story-text h2 span{color:var(--accent)}
+.story-text p{color:#53566a;font-size:15.5px;line-height:2.05;margin-bottom:20px}
+.story-sign{
+  margin-top:34px;padding-top:24px;border-top:1px solid var(--line);
+  display:flex;align-items:center;gap:16px;
+}
+.sign-avatar{
+  width:52px;height:52px;border-radius:50%;
+  background:linear-gradient(140deg,var(--sky),var(--lake));
+  display:grid;place-items:center;color:#fff;font-family:var(--serif);font-size:19px;font-weight:700;
+}
+.sign-avatar + div b{display:block;font-size:14.5px;letter-spacing:.5px}
+.sign-avatar + div span{font-size:12px;color:#8a8c99;letter-spacing:1.5px}
+
+.timeline{position:relative;padding-left:34px}
+.timeline::before{
+  content:"";position:absolute;left:8px;top:6px;bottom:6px;width:1px;
+  background:linear-gradient(180deg,var(--accent),var(--accent-2),transparent);
+}
+.tl-item{position:relative;padding-bottom:38px}
+.tl-item:last-child{padding-bottom:0}
+.tl-item::before{
+  content:"";position:absolute;left:-30px;top:6px;width:11px;height:11px;border-radius:50%;
+  background:var(--paper);border:2px solid var(--accent);
+  box-shadow:0 0 0 4px rgba(232,80,58,.12);
+}
+.tl-item .yr{font-family:var(--serif);font-size:14px;color:var(--accent);letter-spacing:2px;font-weight:700}
+.tl-item h4{font-size:16.5px;margin:6px 0 6px;letter-spacing:.5px}
+.tl-item p{font-size:13.5px;color:#6b6e7d;line-height:1.85}
+
+/* ============ 社区 ============ */
+.community-section{background:linear-gradient(180deg,#eeebe2,#f6f4ef)}
+.comm-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.comm-card{
+  background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px;
+  transition:.35s;display:flex;flex-direction:column;gap:14px;
+}
+.comm-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.comm-top{display:flex;align-items:center;gap:12px}
+.comm-ava{
+  width:42px;height:42px;border-radius:50%;flex:none;
+  display:grid;place-items:center;color:#fff;font-size:15px;font-weight:700;
+  font-family:var(--serif);
+}
+.comm-top b{font-size:14.5px;display:block;letter-spacing:.3px}
+.comm-top span{font-size:11.5px;color:#9a9cab;letter-spacing:1px}
+.comm-card p{font-size:14px;color:#52556a;line-height:1.9;flex:1}
+.comm-reacts{display:flex;gap:16px;font-size:12px;color:#8a8c99;border-top:1px dashed var(--line);padding-top:14px}
+.comm-reacts span{display:inline-flex;align-items:center;gap:5px;transition:.3s;cursor:default}
+.comm-reacts span:hover{color:var(--accent)}
+.comm-reacts svg{width:14px;height:14px;fill:currentColor;opacity:.7}
+
+.comm-banner{
+  margin-top:44px;border-radius:22px;padding:44px 48px;
+  background:linear-gradient(120deg,var(--ink),#232a4a 60%,#1b3a5c);
+  color:#fff;display:flex;justify-content:space-between;align-items:center;gap:32px;
+  flex-wrap:wrap;position:relative;overflow:hidden;
+}
+.comm-banner::after{
+  content:"";position:absolute;right:-60px;top:-60px;width:240px;height:240px;border-radius:50%;
+  background:radial-gradient(circle,rgba(232,80,58,.45),transparent 68%);
+}
+.comm-banner h3{font-family:var(--serif);font-size:26px;letter-spacing:1px;position:relative;z-index:2}
+.comm-banner p{color:rgba(255,255,255,.6);font-size:13.5px;letter-spacing:1px;margin-top:6px;position:relative;z-index:2}
+
+/* ============ 数据/展示 ============ */
+.data-section{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.data-section::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(50% 60% at 85% 10%,rgba(47,95,179,.35),transparent 62%),
+             radial-gradient(50% 60% at 10% 90%,rgba(232,80,58,.18),transparent 62%);
+}
+.data-inner{position:relative;z-index:2;max-width:1240px;margin:0 auto;padding:96px 28px}
+.data-head{text-align:center;margin-bottom:56px}
+.data-head h2{font-family:var(--serif);font-size:clamp(28px,3.6vw,40px);letter-spacing:1px;margin-bottom:14px}
+.data-head p{color:rgba(255,255,255,.55);font-size:14.5px;letter-spacing:1px}
+.data-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+.data-cell{
+  border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:30px 24px;
+  background:rgba(255,255,255,.03);transition:.35s;
+}
+.data-cell:hover{border-color:rgba(240,169,59,.5);transform:translateY(-5px);background:rgba(255,255,255,.06)}
+.data-cell b{
+  font-family:var(--serif);font-size:clamp(30px,3.6vw,42px);display:block;letter-spacing:1px;
+  background:linear-gradient(100deg,#fff,var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.data-cell span{font-size:12.5px;color:rgba(255,255,255,.5);letter-spacing:2px;margin-top:6px;display:block}
+
+/* ============ FAQ ============ */
+.faq-section{background:var(--paper)}
+.faq-list{max-width:920px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+.faq-item{
+  background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.3s;
+}
+.faq-item.open{border-color:var(--accent);box-shadow:0 14px 34px -22px rgba(232,80,58,.5)}
+.faq-q{
+  width:100%;text-align:left;background:none;border:0;cursor:pointer;
+  padding:24px 26px;font-size:16px;font-family:var(--sans);color:var(--ink);
+  display:flex;justify-content:space-between;align-items:center;gap:20px;
+  font-weight:600;letter-spacing:.3px;
+}
+.faq-q .ico{
+  width:24px;height:24px;flex:none;border-radius:50%;border:1px solid var(--line);
+  display:grid;place-items:center;position:relative;transition:.35s;
+}
+.faq-q .ico::before,.faq-q .ico::after{
+  content:"";position:absolute;background:var(--ink);border-radius:2px;transition:.35s;
+}
+.faq-q .ico::before{width:10px;height:1.5px}
+.faq-q .ico::after{width:1.5px;height:10px}
+.faq-item.open .faq-q .ico{background:var(--accent);border-color:var(--accent);transform:rotate(90deg)}
+.faq-item.open .faq-q .ico::before,.faq-item.open .faq-q .ico::after{background:#fff}
+.faq-item.open .faq-q .ico::after{opacity:0}
+.faq-a{
+  max-height:0;overflow:hidden;transition:max-height .45s ease;
+}
+.faq-a p{padding:0 26px 26px;color:#5c5f72;font-size:14.5px;line-height:1.95}
+
+/* ============ 页脚 ============ */
+.site-footer{background:#080a12;color:rgba(255,255,255,.6);padding:74px 0 30px;position:relative;overflow:hidden}
+.footer-inner{max-width:1240px;margin:0 auto;padding:0 28px}
+.footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:44px;padding-bottom:52px;border-bottom:1px solid rgba(255,255,255,.1)}
+.footer-brand h4{font-family:var(--serif);color:#fff;font-size:20px;letter-spacing:2px;margin-bottom:16px}
+.footer-brand p{font-size:13.5px;line-height:1.95;max-width:320px}
+.footer-col h5{color:#fff;font-size:13px;letter-spacing:2.5px;margin-bottom:18px;font-weight:600}
+.footer-col a{display:block;color:rgba(255,255,255,.55);text-decoration:none;font-size:13px;padding:6px 0;transition:.25s}
+.footer-col a:hover{color:var(--accent-2);transform:translateX(4px)}
+.footer-bottom{
+  display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;
+  padding-top:28px;font-size:12px;letter-spacing:1px;
+}
+.footer-bottom .socials{display:flex;gap:12px}
+.footer-bottom .socials a{
+  width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,255,255,.18);
+  display:grid;place-items:center;color:rgba(255,255,255,.7);transition:.3s;
+}
+.footer-bottom .socials a:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+.footer-bottom .socials svg{width:15px;height:15px;fill:currentColor}
+
+/* ============ 回归顶部 ============ */
+.to-top{
+  position:fixed;right:26px;bottom:26px;width:46px;height:46px;border-radius:50%;
+  background:var(--accent);color:#fff;display:grid;place-items:center;cursor:pointer;
+  box-shadow:0 14px 30px -10px rgba(232,80,58,.8);opacity:0;pointer-events:none;
+  transition:.35s;z-index:90;border:0;
+}
+.to-top.show{opacity:1;pointer-events:auto}
+.to-top:hover{transform:translateY(-4px)}
+.to-top svg{width:18px;height:18px;fill:#fff;transition:.3s}
+.to-top:hover svg{transform:translateY(-2px)}
+
+/* ============ 进场动画 ============ */
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .8s cubic-bezier(.2,.7,.3,1),transform .8s cubic-bezier(.2,.7,.3,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* ============ 响应式 ============ */
+@media(max-width:1080px){
+  .hero-inner{grid-template-columns:1fr;gap:48px}
+  .hero-player{max-width:560px}
+  .mv-grid{grid-template-columns:repeat(2,1fr)}
+  .lake-inner{grid-template-columns:1fr;gap:48px}
+  .story-grid{grid-template-columns:1fr;gap:48px}
+  .comm-grid{grid-template-columns:repeat(2,1fr)}
+  .data-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-top{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .nav-links{
+    position:fixed;top:70px;left:0;right:0;background:rgba(10,12,22,.98);
+    flex-direction:column;align-items:stretch;padding:14px 20px 22px;gap:4px;
+    transform:translateY(-130%);transition:.4s;border-bottom:1px solid rgba(255,255,255,.1);
+  }
+  .nav-links.open{transform:none}
+  .nav-links a{padding:13px 14px}
+  .nav-toggle{display:block}
+  .hero{padding:110px 0 70px}
+  .hero-stats{grid-template-columns:repeat(2,1fr);gap:26px}
+  .section{padding:80px 22px}
+  .lake-inner{padding:80px 22px}
+  .mv-grid{grid-template-columns:1fr}
+  .comm-grid{grid-template-columns:1fr}
+  .comm-banner{padding:34px 26px}
+  .data-grid{grid-template-columns:1fr 1fr;gap:16px}
+  .footer-top{grid-template-columns:1fr;gap:34px}
+  .lake-item{grid-template-columns:44px 1fr;gap:14px}
+  .lake-item .date{grid-column:2}
+}
+@media(max-width:480px){
+  .hero-actions .btn{flex:1;justify-content:center}
+  .sec-head{align-items:flex-start}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- ================= 顶部导航 ================= -->
+<header class="site-header" id="siteHeader">
+  <div class="nav-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M4 17V7l8 4 8-4v10l-8 4-8-4Z" stroke="#fff" stroke-width="1.7" stroke-linejoin="round"/><path d="M12 11v6" stroke="#fff" stroke-width="1.7"/></svg>
+      </span>
+      <span class="brand-text">五月天·五月湖<small>MAYDAY LAKE</small></span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#mv">MV 在线看</a>
+      <a href="#lake">五月湖现场</a>
+      <a href="#story">品牌故事</a>
+      <a href="#community">乐迷社区</a>
+      <a href="#faq">常见问题</a>
+      <a href="#mv" class="nav-cta">立即播放</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="打开菜单">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ================= 首屏 ================= -->
+<section class="hero" id="top">
+  <canvas class="hero-canvas" id="heroCanvas"></canvas>
+  <div class="hero-grain"></div>
+  <div class="hero-inner">
+    <div class="hero-copy reveal">
+      <span class="hero-eyebrow">Official Video Channel</span>
+      <h1>五月天<em>五月湖</em></h1>
+      <p class="hero-sub">把每一次合唱，留在湖面之上。这里是五月天五月湖官方影像专区，收录巡演MV、现场纪实与乐迷共创，点开即看，无需等待。</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#mv">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          在线看 MV
+        </a>
+        <a class="btn btn-ghost" href="#lake">走进五月湖现场</a>
+      </div>
+    </div>
+
+    <aside class="hero-player reveal">
+      <div class="player-screen">
+        <div class="play-ring" id="heroPlay" role="button" aria-label="播放五月湖主题MV">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+        <div class="player-hud">
+          <span>NOW PLAYING</span>
+          <span class="hud-bar"><i></i></span>
+          <span>04:12</span>
+        </div>
+      </div>
+      <div class="player-meta">
+        <div>
+          <h3>《五月湖》官方 MV · 完整版</h3>
+          <p>MAYDAY · LAKE SESSIONS</p>
+        </div>
+        <span class="live-tag"><b></b>在线可看</span>
+      </div>
+    </aside>
+  </div>
+
+  <div class="hero-stats reveal">
+    <div class="stat"><b>6</b><span>官方 MV 曲目</span></div>
+    <div class="stat"><b>12</b><span>五月湖现场场次</span></div>
+    <div class="stat"><b>1800万</b><span>累计播放量</span></div>
+    <div class="stat"><b>24H</b><span>社区持续活跃</span></div>
+  </div>
+</section>
+
+<!-- ================= MV 在线看 ================= -->
+<section class="mv-section" id="mv">
+  <div class="section">
+    <div class="sec-head reveal">
+      <div>
+        <span class="sec-kicker">WATCH ONLINE</span>
+        <h2>五月天 MV 在线看</h2>
+      </div>
+      <p>精选官方影像，从五月湖现场到录音室花絮，全部支持在线流畅观看，也支持收藏到个人歌单。</p>
+    </div>
+
+    <div class="mv-grid" id="mvGrid">
+      <!-- 卡片由脚本渲染，保证内容与交互分离 -->
+    </div>
+
+    <div class="mv-more reveal">
+      <a class="btn btn-ghost" href="#mv">查看全部影像</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 五月湖现场 ================= -->
+<section class="lake-section" id="lake">
+  <div class="lake-inner">
+    <div class="lake-visual reveal">
+      <div class="lake-stage">
+        <div class="moon"></div>
+        <svg class="lake-svg" viewBox="0 0 400 240" preserveAspectRatio="none">
+          <path d="M0 150 Q60 128 120 148 T240 146 T400 152 V240 H0 Z" fill="#0b2030"/>
+          <path d="M0 176 Q70 156 140 174 T270 172 T400 180 V240 H0 Z" fill="#081824"/>
+          <path d="M0 200 Q90 186 180 200 T400 198 V240 H0 Z" fill="#060f18"/>
+          <g stroke="#4fa8ad" stroke-width="1" opacity=".5">
+            <line x1="150" y1="158" x2="250" y2="158"/>
+            <line x1="130" y1="170" x2="270" y2="170"/>
+            <line x1="110" y1="182" x2="290" y2="182"/>
+          </g>
+          <ellipse cx="200" cy="158" rx="46" ry="7" fill="#f0d79a" opacity=".28"/>
+        </svg>
+        <div class="crowd" id="crowd"></div>
+      </div>
+      <div class="lake-caption">
+        <span>MAYDAY LAKE · NIGHT SESSION</span>
+        <strong>现场纪实 · 夜色篇</strong>
+      </div>
+    </div>
+
+    <div class="lake-info reveal">
+      <span class="sec-kicker">LIVE ARCHIVE</span>
+      <h2 style="font-family:var(--serif);font-size:clamp(30px,4vw,46px);line-height:1.2;letter-spacing:1px;font-weight:800;margin-bottom:18px">五月湖的每一场夜</h2>
+      <p style="color:rgba(255,255,255,.62);font-size:15px;max-width:480px">从初夏到深秋，把湖风、灯光和万人大合唱一起录进影像里。以下场次均可在站内回看完整版。</p>
+
+      <div class="lake-list" id="lakeList"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 品牌故事 ================= -->
+<section class="story-section" id="story">
+  <div class="section">
+    <div class="story-grid">
+      <div class="story-text reveal">
+        <span class="sec-kicker">OUR STORY</span>
+        <h2>把湖边的声音，<span>做成可以反复看的影像</span></h2>
+        <p>五月天五月湖，不只是一个播放页面。它起源于一场湖边的即兴演唱——没有大舞台，只有月光、风声和一群不肯走的人。我们把那晚拍了下来，后来它变成了一个持续的影像计划。</p>
+        <p>每一条 MV 都保留现场的环境声与呼吸感，让线上观看的人也能听见湖面回响。我们相信，影像的价值不在于画质参数，而在于它能不能让你想起某个具体的人、某段具体的夏天。</p>
+        <p>从巡演跟拍到乐迷共创短片，五月湖持续开放投稿与放映，让每一个到过现场或只是路过的人，都能在这里找到属于自己的那一帧。</p>
+        <div class="story-sign">
+          <div class="sign-avatar">湖</div>
+          <div>
+            <b>五月湖影像组</b>
+            <span>MAYDAY LAKE VISUAL TEAM</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline reveal" id="timeline">
+        <!-- 时间线由脚本渲染 -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 社区 ================= -->
+<section class="community-section" id="community">
+  <div class="section">
+    <div class="sec-head reveal">
+      <div>
+        <span class="sec-kicker">COMMUNITY</span>
+        <h2>乐迷社区正在发生</h2>
+      </div>
+      <p>来自各地的乐迷在五月湖留下观看笔记、现场片段与合唱投稿，让这个页面每天都有新鲜内容。</p>
+    </div>
+
+    <div class="comm-grid" id="commGrid"></div>
+
+    <div class="comm-banner reveal">
+      <div>
+        <h3>把你的五月湖，投进放映单</h3>
+        <p>上传现场视频或观看笔记，通过审核后将在社区与 MV 专区同步展示。</p>
+      </div>
+      <a class="btn btn-primary" href="#mv">参与投稿</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 数据 ================= -->
+<section class="data-section">
+  <div class="data-inner">
+    <div class="data-head reveal">
+      <h2>影像被看见的次数</h2>
+      <p>数据每周更新，记录五月湖与乐迷之间的真实连接</p>
+    </div>
+    <div class="data-grid">
+      <div class="data-cell reveal"><b>1,824万</b><span>MV 累计播放</span></div>
+      <div class="data-cell reveal"><b>36.7万</b><span>社区收藏与分享</span></div>
+      <div class="data-cell reveal"><b>4,120</b><span>乐迷投稿片段</span></div>
+      <div class="data-cell reveal"><b>98.2%</b><span>在线播放成功率</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="faq-section" id="faq">
+  <div class="section">
+    <div class="sec-head reveal" style="justify-content:center;text-align:center;flex-direction:column;align-items:center;gap:16px">
+      <span class="sec-kicker">FAQ</span>
+      <h2>关于五月湖 MV 在线看</h2>
+      <p style="max-width:560px">常见疑问一次说清，若仍有问题可通过页脚渠道联系影像组。</p>
+    </div>
+
+    <div class="faq-list" id="faqList">
+      <div class="faq-item">
+        <button class="faq-q">五月天五月湖的 MV 可以在线免费看吗？<span class="ico"></span></button>
+        <div class="faq-a"><p>可以。五月天五月湖官方影像专区提供的 MV 均支持在线免费观看，无需注册即可播放。部分高清完整版与现场多机位版本，登录后可解锁更高画质与离线缓存功能。</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">在线看会掉帧或卡顿吗？<span class="ico"></span></button>
+        <div class="faq-a"><p>播放器会根据当前网络自动切换清晰度，移动端与桌面端都做了适配。若出现卡顿，建议切换到 Wi-Fi 环境，或在播放器右下角手动选择较低码率，通常可立即恢复流畅。</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">五月湖现场纪录片的更新频率是怎样的？<span class="ico"></span></button>
+        <div class="faq-a"><p>巡演期间每场演出结束后 3 至 7 天内上线精选片段，完整纪实版按月更新。休演期则以录音室花絮、乐迷投稿放映和主创访谈为主，保证社区内容不断档。</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">如何投稿自己的现场视频？<span class="ico"></span></button>
+        <div class="faq-a"><p>在社区板块点击「参与投稿」，按提示上传原始素材并填写场次信息即可。影像组会在一周内完成审核，通过后内容将出现在社区动态与 MV 专区的乐迷共创栏目中，并标注投稿者署名。</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">手机端观看支持投屏到电视吗？<span class="ico"></span></button>
+        <div class="faq-a"><p>支持。主流手机系统的无线投屏协议均可直接连接智能电视或投影设备，播放器内也提供镜像投屏入口。投屏后画质会自动匹配大屏比例，建议使用 5GHz 网络以获得更稳定的体验。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 页脚 ================= -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h4>五月天 · 五月湖</h4>
+        <p>官方影像与乐迷社区平台。收录五月天五月湖主题 MV、现场纪实与共创短片，让每一次合唱都能被在线看见。</p>
+      </div>
+      <div class="footer-col">
+        <h5>影像专区</h5>
+        <a href="#mv">官方 MV 在线看</a>
+        <a href="#mv">现场多机位版</a>
+        <a href="#mv">录音室花絮</a>
+        <a href="#mv">乐迷共创放映</a>
+      </div>
+      <div class="footer-col">
+        <h5>五月湖</h5>
+        <a href="#lake">场次回看</a>
+        <a href="#lake">夜场纪实</a>
+        <a href="#story">品牌故事</a>
+        <a href="#community">社区动态</a>
+      </div>
+      <div class="footer-col">
+        <h5>支持</h5>
+        <a href="#faq">常见问题</a>
+        <a href="#community">投稿指引</a>
+        <a href="#faq">播放帮助</a>
+        <a href="#top">返回顶部</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 五月天五月湖影像组 · 仅供官方展示与乐迷交流</span>
+      <div class="socials">
+        <a href="#top" aria-label="视频平台"><svg viewBox="0 0 24 24"><path d="M4 6h16v10H4z" opacity=".0"/><path d="M4 7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7Zm6 2.5v5l4.5-2.5L10 9.5Z"/></svg></a>
+        <a href="#top" aria-label="社区"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm0 4a2 2 0 1 1 0 4 2 2 0 0 1 0-4Zm4.5 9.5c-.7-1.6-2.4-2.5-4.5-2.5s-3.8.9-4.5 2.5a7 7 0 0 0 9 0Z" opacity=".85"/></svg></a>
+        <a href="#top" aria-label="邮箱"><svg viewBox="0 0 24 24"><path d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm1.2 2L12 12l6.8-5H5.2ZM19 8.3l-6.4 4.7a1 1 0 0 1-1.2 0L5 8.3V17h14V8.3Z"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="回到顶部">
+  <svg viewBox="0 0 24 24"><path d="M12 4l7 8h-4v8h-6v-8H5l7-8Z"/></svg>
+</button>
+
+<script>
+/* ============================================================
+   1. 头部滚动状态 & 移动菜单
+   ============================================================ */
+(function(){
+  var header = document.getElementById('siteHeader');
+  var navToggle = document.getElementById('navToggle');
+  var navLinks = document.getElementById('navLinks');
+  var toTop = document.getElementById('toTop');
+
+  function onScroll(){
+    var y = window.scrollY || window.pageYOffset;
+    header.classList.toggle('solid', y > 30);
+    toTop.classList.toggle('show', y > 620);
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  navToggle.addEventListener('click', function(){
+    navLinks.classList.toggle('open');
+  });
+  navLinks.addEventListener('click', function(e){
+    if(e.target.tagName === 'A') navLinks.classList.remove('open');
+  });
+
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+})();
+
+/* ============================================================
+   2. 首屏 Canvas 湖面星空 + 水波
+   ============================================================ */
+(function(){
+  var canvas = document.getElementById('heroCanvas');
+  if(!canvas) return;
+  var ctx = canvas.getContext('2d');
+  var W, H, dpr;
+  var stars = [];
+  var ripples = [];
+
+  function resize(){
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    var rect = canvas.parentElement.getBoundingClientRect();
+    W = rect.width;
+    H = rect.height;
+    canvas.width = W * dpr;
+    canvas.height = H * dpr;
+    canvas.style.width = W + 'px';
+    canvas.style.height = H + 'px';
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    buildStars();
+  }
+
+  function buildStars(){
+    stars = [];
+    var count = Math.min(120, Math.floor(W / 12));
+    for(var i=0;i<count;i++){
+      stars.push({
+        x: Math.random() * W,
+        y: Math.random() * H * 0.72,
+        r: Math.random() * 1.5 + 0.4,
+        base: Math.random() * 0.5 + 0.25,
+        phase: Math.random() * Math.PI * 2,
+        speed: Math.random() * 0.018 + 0.006
+      });
+    }
+  }
+
+  function initRipples(){
+    ripples = [];
+    for(var i=0;i<5;i++){
+      ripples.push({
+        y: H * (0.62 + i * 0.075),
+        amp: 3 + i * 1.4,
+        len: 0.008 + i * 0.002,
+        speed: 0.22 + i * 0.09,
+        phase: Math.random() * 10
+      });
+    }
+  }
+
+  var t = 0;
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+
+    // 星点
+    for(var i=0;i<stars.length;i++){
+      var s = stars[i];
+      var a = s.base + Math.sin(t * s.speed * 10 + s.phase) * 0.28;
+      a = Math.max(0.06, Math.min(1, a));
+      ctx.beginPath();
+      ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,' + a.toFixed(3) + ')';
+      ctx.fill();
+    }
+
+    // 月光光晕
+    var gx = W * 0.5, gy = H * 0.16;
+    var glow = ctx.createRadialGradient(gx, gy, 0, gx, gy, W * 0.34);
+    glow.addColorStop(0, 'rgba(240,215,154,0.16)');
+    glow.addColorStop(0.5, 'rgba(240,215,154,0.05)');
+    glow.addColorStop(1, 'rgba(240,215,154,0)');
+    ctx.fillStyle = glow;
+    ctx.fillRect(0,0,W,H);
+
+    // 湖面波纹
+    for(var j=0;j<ripples.length;j++){
+      var r = ripples[j];
+      ctx.beginPath();
+      for(var x=0;x<=W;x+=8){
+        var y = r.y + Math.sin(x * r.len + t * r.speed + r.phase) * r.amp
+                    + Math.sin(x * r.len * 2.3 + t * r.speed * 1.4) * r.amp * 0.35;
+        if(x===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
+      }
+      var alpha = 0.045 + j * 0.018;
+      ctx.strokeStyle = 'rgba(79,168,173,' + alpha.toFixed(3) + ')';
+      ctx.lineWidth = 1;
+      ctx.stroke();
+    }
+
+    // 月光倒影
+    ctx.save();
+    var refl = ctx.createLinearGradient(0, H * 0.55, 0, H);
+    refl.addColorStop(0, 'rgba(240,215,154,0.10)');
+    refl.addColorStop(1, 'rgba(240,215,154,0)');
+    ctx.fillStyle = refl;
+    ctx.beginPath();
+    ctx.moveTo(W * 0.44, H * 0.55);
+    ctx.lineTo(W * 0.56, H * 0.55);
+    ctx.lineTo(W * 0.68, H);
+    ctx.lineTo(W * 0.32, H);
+    ctx.closePath();
+    ctx.fill();
+    ctx.restore();
+
+    t += 0.016;
+    requestAnimationFrame(draw);
+  }
+
+  window.addEventListener('resize', function(){
+    resize();
+    initRipples();
+  });
+  resize();
+  initRipples();
+  draw();
+})();
+
+/* ============================================================
+   3. 首屏播放按钮交互
+   ============================================================ */
+(function(){
+  var ring = document.getElementById('heroPlay');
+  var screen = ring.parentElement;
+  var playing = true;
+
+  ring.addEventListener('click', function(){
+    playing = !playing;
+    var icon = ring.querySelector('svg');
+    if(playing){
+      icon.innerHTML = '<path d="M8 5v14l11-7z"/>';
+      ring.style.animation = 'pulseRing 3s infinite';
+      var hud = screen.querySelector('.hud-bar i');
+      if(hud) hud.style.animationPlayState = 'running';
+    } else {
+      icon.innerHTML = '<path d="M7 5h4v14H7zM13 5h4v14h-4z"/>';
+      ring.style.animation = 'none';
+      var hud2 = screen.querySelector('.hud-bar i');
+      if(hud2) hud2.style.animationPlayState = 'paused';
+    }
+  });
+})();
+
+/* ============================================================
+   4. 人群剪影生成
+   ============================================================ */
+(function(){
+  var crowd = document.getElementById('crowd');
+  if(!crowd) return;
+  var n = 46;
+  var html = '';
+  for(var i=0;i<n;i++){
+    var h = 8 + Math.random() * 22;
+    var delay = (Math.random() * 2.6).toFixed(2);
+    var dur = (2 + Math.random() * 1.6).toFixed(2);
+    html += '<i style="height:' + h.toFixed(1) + 'px;animation-delay:-' + delay + 's;animation-duration:' + dur + 's"></i>';
+  }
+  crowd.innerHTML = html;
+})();
+
+/* ============================================================
+   5. MV 卡片数据渲染
+   ============================================================ */
+(function(){
+  var mvData = [
+    {
+      tag:'OFFICIAL MV',
+      title:'《五月湖》官方完整版',
+      desc:'夜色、湖面与万人大合唱，一支把现场呼吸感完整保留的官方 MV。',
+      dur:'04:12',
+      views:'播放 386 万',
+      cover:'c1'
+    },
+    {
+      tag:'LIVE SESSION',
+      title:'五月湖夜场 · 多机位回看',
+      desc:'十二台机位同步记录，从舞台侧幕到观众席最后一排都不错过。',
+      dur:'12:48',
+      views:'播放 214 万',
+      cover:'c2'
+    },
+    {
+      tag:'STUDIO',
+      title:'录音室花絮：湖声采样',
+      desc:'把湖水、风声和鸟鸣采进编曲，听主创讲这段声音是怎么来的。',
+      dur:'08:05',
+      views:'播放 97 万',
+      cover:'c3'
+    },
+    {
+      tag:'DOCUMENTARY',
+      title:'从湖边到舞台 · 纪实短片',
+      desc:'一场没有报批的即兴演出，如何长成持续多年的影像计划。',
+      dur:'16:30',
+      views:'播放 152 万',
+      cover:'c4'
+    },
+    {
+      tag:'FAN CREATION',
+      title:'乐迷共创放映单 · 夏夜篇',
+      desc:'由社区投稿剪辑而成，每一条素材背后都是一个具体的夏天。',
+      dur:'09:21',
+      views:'播放 78 万',
+      cover:'c5'
+    },
+    {
+      tag:'ACOUSTIC',
+      title:'五月湖不插电版',
+      desc:'一把木吉他，一盏灯，把合唱降到一个刚刚好的音量。',
+      dur:'05:44',
+      views:'播放 133 万',
+      cover:'c6'
+    }
+  ];
+
+  var grid = document.getElementById('mvGrid');
+  var html = '';
+  mvData.forEach(function(m){
+    html +=
+      '<article class="mv-card reveal">' +
+        '<div class="mv-thumb" data-title="' + m.title + '">' +
+          '<div class="cover ' + m.cover + '"></div>' +
+          '<span class="play-mini"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>' +
+          '<span class="mv-dur">' + m.dur + '</span>' +
+        '</div>' +
+        '<div class="mv-body">' +
+          '<span class="mv-tag">' + m.tag + '</span>' +
+          '<h3>' + m.title + '</h3>' +
+          '<p>' + m.desc + '</p>' +
+          '<div class="mv-foot">' +
+            '<span>' + m.views + '</span>' +
+            '<a class="watch" href="#mv">在线看<svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7z"/></svg></a>' +
+          '</div>' +
+        '</div>' +
+      '</article>';
+  });
+  grid.innerHTML = html;
+
+  // 点击封面模拟播放反馈
+  grid.addEventListener('click', function(e){
+    var thumb = e.target.closest('.mv-thumb');
+    if(!thumb) return;
+    var mini = thumb.querySelector('.play-mini');
+    if(!mini) return;
+    var old = mini.innerHTML;
+    mini.innerHTML = '<svg viewBox="0 0 24 24"><path d="M6 6h4v12H6zM14 6h4v12h-4z"/></svg>';
+    setTimeout(function(){
+      mini.innerHTML = old;
+    }, 900);
+  });
+})();
+
+/* ============================================================
+   6. 五月湖现场场次渲染
+   ============================================================ */
+(function(){
+  var lakeData = [
+    {no:'01', title:'初夏夜 · 湖心开场', desc:'首场五月湖夜演，湖风把合唱吹得很远。', date:'06 / 21'},
+    {no:'02', title:'盛夏场 · 万人大合唱', desc:'从第一句到最后一句，全场没有一个人坐下。', date:'07 / 18'},
+    {no:'03', title:'雨夜加演 · 未公开片段', desc:'设备盖着防水布，但没有人离开。', date:'08 / 09'},
+    {no:'04', title:'秋分夜 · 不插电特别场', desc:'木吉他、手鼓和一盏灯，把湖面唱得很安静。', date:'09 / 23'},
+    {no:'05', title:'深秋终场 · 影像合集', desc:'十二场精华剪辑，一次性放送完整回看。', date:'10 / 30'}
+  ];
+  var list = document.getElementById('lakeList');
+  var html = '';
+  lakeData.forEach(function(item){
+    html +=
+      '<div class="lake-item">' +
+        '<span class="no">' + item.no + '</span>' +
+        '<div>' +
+          '<h4>' + item.title + '</h4>' +
+          '<p>' + item.desc + '</p>' +
+        '</div>' +
+        '<span class="date">' + item.date + '</span>' +
+      '</div>';
+  });
+  list.innerHTML = html;
+})();
+
+/* ============================================================
+   7. 品牌时间线渲染
+   ============================================================ */
+(function(){
+  var tl = [
+    {yr:'2019', title:'湖边的一场即兴', text:'没有舞台，只有月光和一台手持摄像机，五月湖的影像计划从这一晚开始。'},
+    {yr:'2021', title:'第一支官方 MV 上线', text:'《五月湖》官方 MV 发布，首次完整记录湖面与合唱的声场关系。'},
+    {yr:'2023', title:'多机位现场体系成型', text:'十二机位同步录制方案投入使用，现场回看首次做到"想看哪一排看哪一排"。'},
+    {yr:'2024', title:'乐迷共创放映单', text:'开放投稿通道，社区片段经剪辑后进入官方放映单，署名保留原作者。'},
+    {yr:'2025', title:'全年在线可看', text:'影像库完成在线化改造，五月天五月湖全部 MV 支持随时点开即看。'}
+  ];
+  var box = document.getElementById('timeline');
+  var html = '';
+  tl.forEach(function(item){
+    html +=
+      '<div class="tl-item">' +
+        '<span class="yr">' + item.yr + '</span>' +
+        '<h4>' + item.title + '</h4>' +
+        '<p>' + item.text + '</p>' +
+      '</div>';
+  });
+  box.innerHTML = html;
+})();
+
+/* ============================================================
+   8. 社区动态渲染
+   ============================================================ */
+(function(){
+  var commData = [
+    {
+      name:'湖边第一排',
+      role:'社区影像志愿者',
+      color:'linear-gradient(140deg,#e8503a,#f0a93b)',
+      initial:'湖',
+      text:'昨晚把五月湖夜场多机位版又刷了一遍，导播切到观众席那一秒还是起鸡皮疙瘩。已经投稿了自己的侧拍素材，希望被剪进下一期放映单。',
+      like:'赞 1,284',
+      reply:'评论 96'
+    },
+    {
+      name:'阿岸',
+      role:'乐迷 · 上海',
+      color:'linear-gradient(140deg,#2f5fb3,#4fa8ad)',
+      initial:'岸',
+      text:'不插电那场太适合在深夜看了，音量不用开大，湖面反光刚好落在屏幕下方，像真的坐在湖边听。',
+      like:'赞 862',
+      reply:'评论 41'
+    },
+    {
+      name:'星期三的雨',
+      role:'乐迷 · 成都',
+      color:'linear-gradient(140deg,#1d6f7a,#2f5fb3)',
+      initial:'雨',
+      text:'雨夜加演那段未公开片段终于放出来了，防水布被风吹起来的画面特别真实。五月天五月湖最好的地方就是不修掉这些意外。',
+      like:'赞 1,507',
+      reply:'评论 128'
+    },
+    {
+      name:'小满',
+      role:'投稿作者',
+      color:'linear-gradient(140deg,#b23a52,#e8503a)',
+      initial:'满',
+      text:'第一次投稿就被选中了，剪辑保留了原始环境声，署名也在片尾。这种被认真对待的感觉，比播放量更让人想继续拍下去。',
+      like:'赞 973',
+      reply:'评论 67'
+    },
+    {
+      name:'夜航船',
+      role:'乐迷 · 厦门',
+      color:'linear-gradient(140deg,#173a78,#4fa8ad)',
+      initial:'航',
+      text:'在移动端看完全程没有卡，自动切码率很稳。唯一的请求是出一个纯环境声模式，想戴着耳机只听湖风。',
+      like:'赞 630',
+      reply:'评论 33'
+    },
+    {
+      name:'第十一排',
+      role:'社区常驻',
+      color:'linear-gradient(140deg,#8a6a2f,#f0a93b)',
+      initial:'排',
+      text:'整理了一份五月湖所有场次的时间索引，搭配 MV 一起看会更清楚哪一段来自哪一晚，已经发在社区置顶帖里。',
+      like:'赞 2,041',
+      reply:'评论 185'
+    }
+  ];
+
+  var grid = document.getElementById('commGrid');
+  var html = '';
+  commData.forEach(function(c){
+    html +=
+      '<article class="comm-card reveal">' +
+        '<div class="comm-top">' +
+          '<div class="comm-ava" style="background:' + c.color + '">' + c.initial + '</div>' +
+          '<div><b>' + c.name + '</b><span>' + c.role + '</span></div>' +
+        '</div>' +
+        '<p>' + c.text + '</p>' +
+        '<div class="comm-reacts">' +
+          '<span><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.4-9-8.5C1.5 8.5 4 5 7.5 5c1.8 0 3.2 1 4.5 2.6C13.3 6 14.7 5 16.5 5 20 5 22.5 8.5 21 12.5 19 16.6 12 21 12 21Z"/></svg>' + c.like + '</span>' +
+          '<span><svg viewBox="0 0 24 24"><path d="M4 5h16a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H8l-4 4V6a1 1 0 0 1 1-1Z"/></svg>' + c.reply + '</span>' +
+        '</div>' +
+      '</article>';
+  });
+  grid.innerHTML = html;
+})();
+
+/* ============================================================
+   9. FAQ 手风琴
+   ============================================================ */
+(function(){
+  var items = document.querySelectorAll('#faqList .faq-item');
+  items.forEach(function(item){
+    var q = item.querySelector('.faq-q');
+    var a = item.querySelector('.faq-a');
+    q.addEventListener('click', function(){
+      var isOpen = item.classList.contains('open');
+      items.forEach(function(other){
+        other.classList.remove('open');
+        other.querySelector('.faq-a').style.maxHeight = null;
+      });
+      if(!isOpen){
+        item.classList.add('open');
+        a.style.maxHeight = a.scrollHeight + 'px';
+      }
+    });
+  });
+})();
+
+/* ============================================================
+   10. 滚动进场动画
+   ============================================================ */
+(function(){
+  var els = document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){
+    els.forEach(function(el){ el.classList.add('in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, {threshold:0.12, rootMargin:'0px 0px -60px 0px'});
+
+  els.forEach(function(el, i){
+    el.style.transitionDelay = (i % 4) * 0.06 + 's';
+    io.observe(el);
+  });
+})();
+</script>
+</body>
+  </html>
